@@ -3,5 +3,5 @@ from pydantic import BaseModel, Field
 
 class DockerImage(BaseModel):
     image_name: str = Field(
-        description="Docker image name with optional tag (e.g., 'supurr/algobot:arm')"
+        description="Docker image name with optional tag (e.g., 'supurr/aglotrade:arm')"
     )
