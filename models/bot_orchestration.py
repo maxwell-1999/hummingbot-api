@@ -132,7 +132,8 @@ class V2ScriptDeployment(BaseModel):
         description="Name of the credentials profile to use"
     )
     image: str = Field(
-        default="supurr/hbot:2", description="Docker image for the Hummingbot instance"
+        default="supurr/algobot:arm",
+        description="Docker image for the Hummingbot instance",
     )
     script: Optional[str] = Field(
         default=None, description="Name of the script to run (without .py extension)"
@@ -163,6 +164,7 @@ class V2ControllerDeployment(BaseModel):
         description="Maximum allowed per-controller drawdown in quote usually USDT",
     )
     image: str = Field(
-        default="supurr/hbot:2", description="Docker image for the Hummingbot instance"
+        default="supurr/algobot:arm",
+        description="Docker image for the Hummingbot instance",
     )
     headless: bool = Field(default=False, description="Run in headless mode (no UI)")
