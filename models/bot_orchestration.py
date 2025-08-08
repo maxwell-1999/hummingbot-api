@@ -132,7 +132,7 @@ class V2ScriptDeployment(BaseModel):
         description="Name of the credentials profile to use"
     )
     image: str = Field(
-        default="supurr/algotrade:0.1",
+        default="supurr/algotrade:arm",
         description="Docker image for the Hummingbot instance",
     )
     script: Optional[str] = Field(
@@ -164,7 +164,7 @@ class V2ControllerDeployment(BaseModel):
         description="Maximum allowed per-controller drawdown in quote usually USDT",
     )
     image: str = Field(
-        default="supurr/algotrade:0.1",
+        default="supurr/algotrade:arm",
         description="Docker image for the Hummingbot instance",
     )
     headless: bool = Field(default=False, description="Run in headless mode (no UI)")
